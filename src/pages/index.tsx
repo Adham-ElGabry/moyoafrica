@@ -240,21 +240,7 @@ export default function Home() {
 
               Moyo harnesses cutting-edge technologies like artificial intelligence to revolutionize environmental, social, and economic landscapes. By enhancing air quality, optimizing agriculture, expanding renewable energy, and streamlining waste management, Moyo delivers smart, impactful solutions. We empower youth with advanced environmental skills and engage communities through inspiring awareness programs, fostering active participation in conservation. Committed to a thriving green economy, Moyo supports sustainable businesses and creates new job opportunities, all secured by long-term investments. Join Moyo in shaping a brighter, greener future for generations to come.
             </h2>
-            <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
-              {aboutStats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col items-center text-center xl:items-start xl:text-start"
-                >
-                  <span className="clash-grotesk text-gradient text-4xl font-semibold tracking-tight xl:text-6xl">
-                    {stat.value}
-                  </span>
-                  <span className="tracking-tight text-muted-foreground xl:text-lg">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
-            </div>
+            
           </div>
         </section>
 
