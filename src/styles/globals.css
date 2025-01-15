@@ -1,0 +1,107 @@
+@import "clash-grotesk.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background and Foreground */
+    --background: 154 74% 22%; /* #1d4033 (Dark Green) */
+    --foreground: 0 0% 100%;  /* #FFFFFF (White) */
+
+    /* Primary Colors */
+    --primary: 154 68% 45%;   /* #17bf7f (Bright Green) */
+    --secondary: 160 54% 57%; /* #52cc9d (Minty Green) */
+
+    /* Accent Colors */
+    --accent: 154 68% 45%;    /* #17bf7f (Bright Green, reusing primary) */
+    --accent-foreground: 0 0% 100%; /* White for contrast on accent */
+
+    /* Additional Colors */
+    --muted: 154 34% 37%;     /* #37785f (Medium muted green) */
+    --muted-foreground: 0 0% 100%; /* White text */
+    --neon: 154 82% 52%;      /* #12e695 (Neon green) */
+    --dark-muted: 154 45% 26%; /* #267054 (Darker muted green) */
+
+    /* Border and Input Colors */
+    --border: 154 34% 37%;    /* #37785f */
+    --input: 154 54% 22%;     /* #1d4033 (Background as input) */
+
+    /* Ring Color */
+    --ring: 154 68% 45%;      /* #17bf7f (Bright Green) */
+
+    /* Border Radius */
+    --radius: 0.5rem;
+  }
+}
+/* global elements */
+@layer base {
+  html[data-scroll-orientation="horizontal"] {
+    body {
+      @apply w-fit;
+    }
+    [data-scroll-container] {
+      @apply flex;
+    }
+  }
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-background text-foreground cursor-wait;
+  }
+  section {
+    scroll-margin-top: 60px;
+  }
+}
+
+/* custom scrollbar */
+@layer base {
+  ::-webkit-scrollbar {
+    @apply h-2.5 w-2 transition;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    @apply bg-primary;
+  }
+}
+
+/* custom styles */
+@layer base {
+  .clash-grotesk {
+    font-family: "ClashGrotesk-Variable", sans-serif;
+  }
+  .text-gradient {
+    @apply bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent;
+  }
+  .nav-active {
+    color: rgb(226 232 240) !important;
+    @apply text-sm lowercase tracking-tight text-slate-200;
+  }
+  .nav-link {
+    /* Remove the styles from nav-link class */
+    @apply text-sm lowercase tracking-tight text-slate-400;
+  }
+
+  /* blinking animation */
+  @keyframes blink {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  .animate-blink {
+    animation: blink 1s infinite;
+  }
+}
