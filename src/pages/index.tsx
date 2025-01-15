@@ -26,15 +26,6 @@ import {
 } from "@/components/ui/carousel";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
-
-const aboutStats = [
-  { label: "Internships Held", value: "Upcoming" },
-  { label: "Interns Trained", value: "Whatever" },
-  { label: "Parteners", value: "Duh" },
-];
-
-
-
 const services = [
   {
     service: "Youth Empowerment",
