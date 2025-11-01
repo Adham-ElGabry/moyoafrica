@@ -32,6 +32,7 @@ const words = [
   "Hellow",
   "Mbote",
   "Pẹlẹ o",
+  "kumusta",
 ];
 
 export default function Preloader() {
